@@ -24,3 +24,12 @@ services:
      - 8080:8080
     depends_on:
      - mysqldb
+    
+  angular_app:
+    image: NaderBessioud/esprithhubfrontfront:1.0
+    container_name: esprithubangular
+    restart: on-failure
+    ports:
+     - 4200:80
+    depends_on:
+     - spring_app
