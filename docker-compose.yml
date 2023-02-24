@@ -12,8 +12,14 @@ services:
      - MYSQL_DATABASE=esprithub
      - MYSQL_USER=root
      - MYSQL_PASSWORD=
-
-
+     
+   python_app:
+    image: naderbessioud/esprithubpython:latest
+    container_name: esprithubpython
+    restart: on-failure
+    ports:
+     - 5000:5000
+    
   spring_app:
     image: NaderBessioud/esprithub
     container_name: esprithubspring
@@ -26,10 +32,11 @@ services:
      - mysqldb
     
   angular_app:
-    image: NaderBessioud/esprithhubfrontfront:1.0
+    image: naderbessioud/esprithubangular:latest
     container_name: esprithubangular
     restart: on-failure
     ports:
      - 4200:80
     depends_on:
      - spring_app
+     - python_app
