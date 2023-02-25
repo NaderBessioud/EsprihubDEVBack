@@ -6,7 +6,7 @@ services:
     image: mysql/mysql-server:8.0
     restart: unless-stopped
     ports:
-     - 3306:3306
+     - 3308:3308
     environment:
      - MYSQL_ROOT_PASSWORD=0000
      - MYSQL_DATABASE=esprithub
