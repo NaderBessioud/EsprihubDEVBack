@@ -21,7 +21,7 @@ services:
      - 5000:5000
     
   spring_app:
-    image: NaderBessioud/esprithub
+    image: naderbessioud/esprithubspring1:latest
     container_name: esprithubspring
     restart: on-failure
     environment:
