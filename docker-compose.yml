@@ -13,7 +13,7 @@ services:
      - MYSQL_USER=root
      - MYSQL_PASSWORD=
      
-   python_app:
+  python_app:
     image: naderbessioud/esprithubpython:latest
     container_name: esprithubpython
     restart: on-failure
