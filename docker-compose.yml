@@ -4,7 +4,6 @@ services:
   mysqldb:
     container_name: mysqldb
     image: mysql/mysql-server:8.0
-    restart: unless-stopped
     ports:
      - 3308:3308
     environment:
