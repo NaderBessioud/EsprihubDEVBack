@@ -11,7 +11,7 @@ services:
      - MYSQL_DATABASE=esprithub
      - MYSQL_USER=nader
      - MYSQL_PASSWORD=0000
-     expose:
+    expose:
      - 3308
      
   python_app:
