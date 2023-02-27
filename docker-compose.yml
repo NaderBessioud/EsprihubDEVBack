@@ -24,7 +24,7 @@ services:
     image: naderbessioud/esprithubspring1:latest
     container_name: esprithubspring
     environment:
-     -SLEEP_LENGTH=5
+     - SLEEP_LENGTH=5
      - spring.datasource.url=jdbc:mysql://mysqldb:3306/esprithub?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     ports:
      - 8083:8083
