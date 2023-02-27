@@ -6,12 +6,14 @@ services:
     image: mysql/mysql-server:8.0
     restart: unless-stopped
     ports:
-     - 3308:80
+     - 3308:3308
     environment:
      - MYSQL_ROOT_PASSWORD=0000
      - MYSQL_DATABASE=esprithub
-     - MYSQL_USER=root
-     - MYSQL_PASSWORD=
+     - MYSQL_USER=nader
+     - MYSQL_PASSWORD=0000
+     expose:
+     - 3308
      
   python_app:
     image: naderbessioud/esprithubpython:latest
