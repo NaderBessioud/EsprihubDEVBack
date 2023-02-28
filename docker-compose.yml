@@ -35,7 +35,7 @@ services:
      - 8089:8089
     depends_on:
      - mysqldb
-   useSSL=false",
+   
         "spring.datasource.username" : "root",
         "spring.datasource.password" : "guessitplease",
         "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
