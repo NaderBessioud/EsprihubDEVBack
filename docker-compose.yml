@@ -16,13 +16,17 @@ services:
      
   python_app:
     image: naderbessioud/esprithubpython:latest
+    restart: on-failure
     container_name: esprithubpython
     ports:
      - 5000:5000
+    depends_on:
+     - mysqldb
     
   spring_app:
     image: naderbessioud/esprithubspring1:latest
     container_name: esprithubspring1
+    restart: on-failure
     environment:
      SPRING_APPLICATION_JSON: '{
         "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/esprithub?useSSL=false",
