@@ -20,6 +20,7 @@ services:
     image: naderbessioud/esprithubpython:latest
     restart: on-failure
     container_name: esprithubpython
+    command: sh -c "python3 badwords.py && python3 UserProfiling.py"
     ports:
      - 5000:5000
     depends_on:
