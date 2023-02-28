@@ -11,8 +11,7 @@ services:
      - MYSQL_DATABASE=esprithub
      - MYSQL_USER=root
      - MYSQL_PASSWORD=0000
-    expose:
-     - 3306
+    
      
   python_app:
     image: naderbessioud/esprithubpython:latest
@@ -24,9 +23,15 @@ services:
     image: naderbessioud/esprithubspring1:latest
     container_name: esprithubspring
     environment:
-     - SLEEP_LENGTH=5
-     - spring.datasource.password=0000
-     - spring.datasource.url=jdbc:mysql://192.168.2.176:3306/esprithub?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+     SPRING_APPLICATION_JSON: '{
+        "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/esprithub?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false",
+        "spring.datasource.username" : "root",
+        "spring.datasource.password" : "0000",
+        "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
+        "spring.jpa.hibernate.ddl-auto" : "update"
+      }'
+    
+    
     ports:
      - 8083:8083
     depends_on:
