@@ -27,7 +27,7 @@ services:
      SPRING_APPLICATION_JSON: '{
         "spring.datasource.url"  : "jdbc:mysql://mysqldb:33060/esprithub?useSSL=false",
         "spring.datasource.username" : "root",
-        "spring.datasource.password" : "0000",
+        "spring.datasource.password" : "guessitplease",
         "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
         "spring.jpa.hibernate.ddl-auto" : "create"
       }'
