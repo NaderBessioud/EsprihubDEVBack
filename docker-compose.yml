@@ -61,7 +61,7 @@ services:
         "spring.jpa.hibernate.ddl-auto" : "create"
       }'
       FTP_HOST: ftp-server
-      - FTP_SERVER=ftp://myuser:password@ftp-server/ftp
+      FTP_SERVER: ftp://ftp-user:ftpuser@ftp-server/home/ftp-user/ftp
     ports:
      - 8082:8082
     depends_on:
