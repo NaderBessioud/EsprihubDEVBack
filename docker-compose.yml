@@ -52,7 +52,7 @@ services:
       - spring.datasource.password=guessitplease,
       - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect,
       - spring.jpa.hibernate.ddl-auto=create
-      - FTP_HOST: ftp-server
+      - FTP_HOST=ftp-server
     ports:
      - 8082:8082
     depends_on:
