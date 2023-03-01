@@ -71,3 +71,5 @@ services:
      - python_app
 volumes:
  db_data:
+networks:
+  my-network:
