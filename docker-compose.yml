@@ -43,8 +43,8 @@ services:
     container_name: esprithubspring1
     restart: on-failure
     environment:
-     FTP_SERVER=ftp://myuser:password@ftp-server/ftp
-     SPRING_APPLICATION_JSON: '{
+     - FTP_SERVER=ftp://myuser:password@ftp-server/ftp
+     - SPRING_APPLICATION_JSON: '{
         "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/esprithub?allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
         "spring.datasource.username" : "root",
         "spring.datasource.password" : "guessitplease",
