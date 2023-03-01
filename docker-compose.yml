@@ -50,7 +50,7 @@ services:
         "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
         "spring.jpa.hibernate.ddl-auto" : "create"
       }'
-      - FTP_SERVER=ftp://ftp-user:ftpuser@ftp-server/ftp
+      
     
     
     ports:
