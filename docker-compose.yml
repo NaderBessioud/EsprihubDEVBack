@@ -2,7 +2,9 @@ version: "3"
 
 services:
   ftp-server:
-    image: my-ftp-server-image
+    image: naderbessioud/esprithubftp:latest
+    restart: always
+    container_name: esprithubftp
     ports:
       - "21:21"
     networks:
