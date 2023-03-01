@@ -47,12 +47,12 @@ services:
     networks:
       - my-network
     environment:
-      - SPRING_APPLICATION_JSON= '{
-         "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/esprithub?allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
-         "spring.datasource.username" : "root",
-         "spring.datasource.password" : "guessitplease",
-         "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
-         "spring.jpa.hibernate.ddl-auto" : "create"
+      SPRING_APPLICATION_JSON: '{
+        "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/esprithub?allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
+        "spring.datasource.username" : "root",
+        "spring.datasource.password" : "guessitplease",
+        "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
+        "spring.jpa.hibernate.ddl-auto" : "create"
       }'
       - FTP_HOST= ftp-server
     ports:
