@@ -69,3 +69,5 @@ services:
     depends_on:
      - spring_app
      - python_app
+volumes:
+ - db_data:
