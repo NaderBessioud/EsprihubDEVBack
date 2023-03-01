@@ -203,7 +203,7 @@ public class ResponseServiceImp implements IResponseService {
 		 byte[] data;
 		  try {
       		
-       	   ftpClient.connect("192.168.1.16", 21);
+       	   ftpClient.connect("ftp-server", 21);
 		         ftpClient.login("ftp-user", "ftpuser");
            ftpClient.enterLocalPassiveMode();
            ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
