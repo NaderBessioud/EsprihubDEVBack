@@ -6,7 +6,7 @@ services:
     restart: always
     container_name: esprithubftp
     ports:
-      - "21:21"
+      - 21:21
     networks:
       - my-network
     
