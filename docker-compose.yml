@@ -2,11 +2,16 @@ version: "3"
 
 services:
   ftp-server:
-    image: naderbessioud/esprithubftp:latest
-    restart: always
-    container_name: esprithubftp
+    image: stilliard/pure-ftpd:latest
+    volumes:
+      - /mydata:/ftp
     ports:
       - 21:21
+    environment:
+      - FTP_USER=myuser
+      - FTP_PASS=password
+      - FTP_HOME=/ftp
+    restart: always
     networks:
       - my-network
     
@@ -59,6 +64,7 @@ services:
      - 8082:8082
     depends_on:
      - mysqldb
+     - ftp-server
     
   angular_app:
     image: naderbessioud/esprithubangular:latest
