@@ -70,4 +70,4 @@ services:
      - spring_app
      - python_app
 volumes:
- - db_data
+ db_data:
