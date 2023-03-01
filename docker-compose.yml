@@ -8,9 +8,10 @@ services:
     ports:
       - 21:21
     environment:
-      - FTP_USER=myuser
-      - FTP_PASS=password
-      - FTP_HOME=/ftp
+      - FTP_USER=ftp-user
+      - FTP_PASS=ftpuser
+      - FTP_HOME=/home/ftp-user/ftp
+      - FTP_HOST=ftp-server
     restart: always
     networks:
       - my-network
@@ -60,6 +61,7 @@ services:
         "spring.jpa.hibernate.ddl-auto" : "create"
       }'
       FTP_HOST: ftp-server
+      - FTP_SERVER=ftp://myuser:password@ftp-server/ftp
     ports:
      - 8082:8082
     depends_on:
