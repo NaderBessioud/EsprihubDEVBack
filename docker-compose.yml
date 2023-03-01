@@ -1,20 +1,6 @@
 version: "3"
 
-services:
-  ftp-server:
-    image: stilliard/pure-ftpd:latest
-    volumes:
-      - /mydata:/ftp
-    ports:
-      - "20-21:20-21"
-      - "30000-30009:30000-30009"
-    environment:
-      - FTP_USER=myuser
-      - FTP_PASS=password
-      - FTP_HOME=/ftp
-    restart: always
-    
-    
+services:  
   mysqldb:
     container_name: mysqldb
     image: mysql/mysql-server:8.0
