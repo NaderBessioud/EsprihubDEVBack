@@ -267,7 +267,7 @@ public class QuestionServiceImp implements QuestionService {
 		     try {
 		    	
 		    	 
-		         ftpClient.connect("192.168.1.16", 21);
+		         ftpClient.connect("ftp-sever", 21);
 		         ftpClient.login("ftp-user", "ftpuser");
 		         ftpClient.enterLocalPassiveMode();
 
