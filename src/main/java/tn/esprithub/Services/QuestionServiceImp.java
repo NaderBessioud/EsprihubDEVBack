@@ -467,7 +467,7 @@ public class QuestionServiceImp implements QuestionService {
 		 byte[] data;
 		  try {
       		
-       	   ftpClient.connect("ftp-server", 21);
+       	   ftpClient.connect("172.19.0.3", 21);
 		         ftpClient.login("ftp-user", "ftpuser");
            ftpClient.enterLocalPassiveMode();
            ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
