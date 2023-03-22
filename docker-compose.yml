@@ -6,7 +6,7 @@ services:
     volumes:
       - /mydata:/ftp
     ports:
-      - 21:21
+      - "21:21"
     environment:
       - FTP_USER=ftp-user
       - FTP_PASS=ftpuser
