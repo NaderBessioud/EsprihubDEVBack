@@ -267,7 +267,7 @@ public class QuestionServiceImp implements QuestionService {
 		     try {
 		    	
 		    	 
-		         ftpClient.connect("ftp-sever", 21);
+		         ftpClient.connect("192.168.2.181", 21);
 		         ftpClient.login("ftp-user", "ftpuser");
 		         ftpClient.enterLocalPassiveMode();
 
@@ -332,7 +332,7 @@ public class QuestionServiceImp implements QuestionService {
 		 String src="";
 	        try {
 	        		
-	        	   ftpClient.connect("ftp-server", 21);
+	        	   ftpClient.connect("192.168.2.181", 21);
 			         ftpClient.login("ftp-user", "ftpuser");
 	            ftpClient.enterLocalPassiveMode();
 	            ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
