@@ -10,7 +10,8 @@ services:
       - FTP_USER=ftpuser
       - FTP_PASS=pass
       
-     
+    command: >
+      sh -c "echo $FTP_PASS | pure-pw useradd $FTP_USER -u ftpuser -d /ftp/$FTP_USER && pure-pw mkdb /etc/pure-ftpd/passwd/pureftpd.pdb"
     restart: always
     networks:
       - my-network
