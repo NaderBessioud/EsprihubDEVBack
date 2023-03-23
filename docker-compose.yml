@@ -50,6 +50,7 @@ services:
     
   spring_app:
     image: naderbessioud/esprithubspring1:latest
+    network_mode: host
     container_name: esprithubspring1
     restart: on-failure
     networks:
