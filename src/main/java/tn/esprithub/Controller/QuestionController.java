@@ -140,7 +140,7 @@ public class QuestionController {
 		     try {
 		    	
 		    	 
-		         ftpClient.connect("172.19.0.3", 21);
+		         ftpClient.connect("192.168.2.179", 21);
 		         ftpClient.login("ftp-user", "ftpuser");
 		         ftpClient.enterLocalPassiveMode();
 
