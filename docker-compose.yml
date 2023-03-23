@@ -7,13 +7,13 @@ services:
     ports:
       - "21:21"
     environment:
-      - FTP_USER=ftpuser
-      - FTP_PASS=pass
+      - FTP_USER=ftp-user
+      - FTP_PASS=ftpuser
       - PUID=1000
       - PGID=1000
       
-    command: >
-      sh -c "echo $FTP_PASS | pure-pw useradd $FTP_USER -u ftpuser -d /ftp/$FTP_USER && pure-pw mkdb /etc/pure-ftpd/passwd/pureftpd.pdb"
+ 
+
     restart: always
     networks:
       - my-network
