@@ -5,7 +5,7 @@ package tn.esprithub.utils;
 
 
 public class FTPUploadFileDemo {
-	private  String server = "172.19.0.3";
+	private  String server = "192.168.2.179";
 	private int port = 21;
 	private String user = "ftp-user";
 	private String pass = "ftpuser";
