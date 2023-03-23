@@ -15,8 +15,7 @@ services:
  
 
     restart: always
-    networks:
-      - my-network
+    
     
   mysqldb:
     container_name: mysqldb
@@ -24,8 +23,7 @@ services:
     restart: unless-stopped
     ports:
      - 3306:3306
-    networks:
-      - my-network
+    
     environment:
      - MYSQL_ROOT_PASSWORD=guessitplease
      - MYSQL_DATABASE=esprithub
@@ -43,8 +41,7 @@ services:
     container_name: esprithubpython
     ports:
      - 5000:5000
-    networks:
-      - my-network
+    
     depends_on:
      - mysqldb
     
@@ -53,8 +50,7 @@ services:
     network_mode: host
     container_name: esprithubspring1
     restart: on-failure
-    networks:
-      - my-network
+    
     environment:
      
       SPRING_APPLICATION_JSON: '{
@@ -79,12 +75,10 @@ services:
     restart: on-failure
     ports:
      - 4200:80
-    networks:
-      - my-network
+    
     depends_on:
      - spring_app
      - python_app
 volumes:
  db_data:
-networks:
-  my-network:
+
