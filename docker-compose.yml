@@ -6,11 +6,12 @@ services:
     
     ports:
       - "21:21"
+      - "30000-30009:30000-30000"
     environment:
-      - FTP_USER=ftp-user
-      - FTP_PASS=ftpuser
-      - PUID=1000
-      - PGID=1000
+      PUBLICHOST: "localhost"
+      FTP_USER_NAME: "ftp-user"
+      FTP_USER_PASS: "ftpuser"
+      FTP_USER_HOME: "/home/ftpuser"
       
  
 
