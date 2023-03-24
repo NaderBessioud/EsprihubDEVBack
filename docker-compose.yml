@@ -6,12 +6,14 @@ services:
     
     ports:
       - "21:21"
-      - "30000-30009:30000-30000"
+      - "30000-30009:30000-30009"
     environment:
-      PUBLICHOST: "192.168.2.179"
+      PUBLICHOST: 192.168.2.179
       FTP_USER_NAME: "ftp-user"
       FTP_USER_PASS: "ftpuser"
       FTP_USER_HOME: "/home/ftpuser"
+      MIN_PASSIVE_PORT: 30000
+      MAX_PASSIVE_PORT: 30009
       
  
 
