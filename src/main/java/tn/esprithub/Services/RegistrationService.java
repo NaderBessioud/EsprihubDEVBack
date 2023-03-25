@@ -45,7 +45,7 @@ public class RegistrationService {
         String token=  userServiceRegistration.signUpUser(user
               
         );
-      String link= "http://192.168.1.21:8082/EspritHub/registration/confirm?token="+token;
+      String link= "http://192.168.1.17:8082/EspritHub/registration/confirm?token="+token;
      emailSender.send(request.getEmail( ),buildEmail(request.getFirstName() , link));
      
       return  token;
@@ -71,7 +71,7 @@ public class RegistrationService {
         userServiceRegistration.enableAppUser(
                 confirmationToken.getUser().getEmail());
         RedirectView redirectView = new RedirectView();
-        redirectView.setUrl("http://localhost:4200/#/login");
+        redirectView.setUrl("http://192.168.1.17:4200/#/login");
         return redirectView ;
     }
     private String buildEmail(String name, String link) {
