@@ -45,7 +45,7 @@ public class RegistrationService {
         String token=  userServiceRegistration.signUpUser(user
               
         );
-      String link= "http://192.168.2.179:8082/EspritHub/registration/confirm?token="+token;
+      String link= "http://192.168.1.21:8082/EspritHub/registration/confirm?token="+token;
      emailSender.send(request.getEmail( ),buildEmail(request.getFirstName() , link));
      
       return  token;
